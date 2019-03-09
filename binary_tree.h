@@ -25,6 +25,7 @@ class BinarySearchTree{
 		void display() {
 			auto temp = root;
 			inorder(root);
+            std::cout << std::endl;
 		}
 		std::shared_ptr<node> getRoot() {
 			return root;
@@ -34,7 +35,7 @@ class BinarySearchTree{
 			if(bst == nullptr)
 				return;
 			inorder(bst->left);
-			std::cout << bst->data;
+			std::cout << bst->data << "->\t";
 			inorder(bst->right);
 		}
 
